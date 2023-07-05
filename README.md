@@ -18,7 +18,7 @@ or Run by docker compose
 test
 
 
-Run these commands if you are using Amazon Linux-2 machine, to install nodejs and npm:
+# Run these commands if you are using Amazon Linux-2 machine, to install nodejs and npm:
 
 yum update -y
 
@@ -45,6 +45,22 @@ npm audit
 npm audit fix
 
 npm audit fix --force
+
+# Dockerfile
+
+FROM node:12.2.0-alpine
+
+WORKDIR /app
+
+COPY . .
+
+RUN npm install
+RUN npm run test
+
+EXPOSE 8000
+
+CMD ["node", "app.js"]
+
 
 
 
