@@ -18,7 +18,7 @@ or Run by docker compose
 test
 
 
-Run these commands if you are using Amazon Linux-2 machine, to install nodejs:
+Run these commands if you are using Amazon Linux-2 machine, to install nodejs and npm:
 
 yum update -y
 
@@ -32,14 +32,9 @@ npm -v
 
 sudo yum groupinstall -y "Development Tools"
 
-
 yum install npm
 
 npm -v
-
-npm install
-
-cd nodejs-todo-app-cicd/
 
 npm install
 
